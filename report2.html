@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Pig</title>
+  <title>Pi</title>
 
   <!-- three.jsを読み込む(ローカル) -->
   <!-- <script src="./three.js"></script> -->
@@ -127,11 +127,11 @@
     rear.position.set(0.4,0.5,-1.2);
     
     //尻尾の作成
-    var tail_g = new THREE.CylinderGeometry( 0.5, 0.5, 1, 32 );
+    var tail_g = new THREE.CylinderGeometry( 0.5, 0.5, 0.5, 32 );
     var material_tail = new THREE.MeshPhongMaterial({ color: 0xffff00 });
     var tail = new THREE.Mesh( tail_g, material_tail);
-    //tail.rotation.x = -1.5;
-    tail.position.set(0,0,-5);
+    tail.rotation.x = -1.5;
+    tail.position.set(0,0,5);
 
      //ブタのオブジェクト
    const pig = new THREE.Group();
