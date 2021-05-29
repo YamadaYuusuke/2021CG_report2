@@ -56,7 +56,7 @@
     body.scale.z =1.5;
     body.position.set(0,0,0);
 
-    //左足を作成
+    //左前足を作成
     var leg_g = new THREE.SphereGeometry( 0.25, 32, 32 );
     var material_l = new THREE.MeshPhongMaterial({ color: 0x770077 });
     var lleg = new THREE.Mesh( leg_g, material_l);
@@ -64,27 +64,23 @@
     lleg.scale.y = 0.7;
     lleg.position.set(0.3,-0.8,-0.2);
 
-    //右足を作成
+    //右前足を作成
+    var rleg = new THREE.Mesh( leg_g, material_l);
+    rleg.scale.z = 2;
+    rleg.scale.y = 0.7;
+    rleg.position.set(-0.3,-0.8,-0.2);
+    
+    //左後足を作成
+    var rleg = new THREE.Mesh( leg_g, material_l);
+    rleg.scale.z = 2;
+    rleg.scale.y = 0.7;
+    rleg.position.set(0.3,-0.8,1.0);
+    
+    //右後足を作成
     var rleg = new THREE.Mesh( leg_g, material_l);
     rleg.scale.z = 2;
     rleg.scale.y = 0.7;
     rleg.position.set(-0.3,-0.8,1.0);
-    
-    //左羽を作成
-    var win_g = new THREE.SphereGeometry( 0.7, 32, 32 );
-    var material_w = new THREE.MeshPhongMaterial({ color: 0x007777 });
-    var lwin = new THREE.Mesh( win_g, material_w);
-    lwin.scale.x = 0.2;
-    lwin.scale.z = 0.5;
-    lwin.rotation.z = 0.5;
-    lwin.position.set(0.65,0.15,0);
-
-    //右羽を作成
-    var rwin = new THREE.Mesh( win_g, material_w);
-    rwin.scale.x = 0.2;
-    rwin.scale.z = 0.5;
-    rwin.rotation.z = -0.5;
-    rwin.position.set(-0.65,0.15,0);
 
     //くちばしの作成
     var beak_g = new THREE.ConeGeometry( 0.1, 0.5, 32 );
