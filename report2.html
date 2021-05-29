@@ -100,17 +100,17 @@
     var material_nose = new THREE.MeshPhongMaterial({ color: 0xffff00 });
     var nose = new THREE.Mesh( nose_g, material_nose);
     nose.rotation.x = -1.5;
-    nose.position.set(0,-0.05,-1.53);
+    nose.position.set(0,-0.04,-1.53);
 
     //左目
     var eye_g = new THREE.SphereGeometry( 0.1, 32, 32 );
     var material_eye = new THREE.MeshPhongMaterial({ color: 0xffffff });
     var r_eye = new THREE.Mesh( eye_g, material_eye);
-    r_eye.position.set(0.2,0.17,-1.5);
+    r_eye.position.set(0.2,0.17,-1.48);
 
     //右目
     var l_eye = new THREE.Mesh( eye_g, material_eye);
-    l_eye.position.set(-0.2,0.17,-1.5);
+    l_eye.position.set(-0.2,0.17,-1.48);
 
      //ブタのオブジェクト
    const pig = new THREE.Group();
