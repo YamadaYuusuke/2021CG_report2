@@ -96,11 +96,11 @@
     b_rleg.position.set(0.3,-0.6,0.65);
 
     //鼻の作成
-    var beak_g = new THREE.CylinderGeometry( 0.15, 0.15, 0.1, 32 );
-    var material_beak = new THREE.MeshPhongMaterial({ color: 0xffff00 });
-    var beak = new THREE.Mesh( beak_g, material_beak);
-    beak.rotation.x = -1.5;
-    beak.position.set(0,-0.05,-1.53);
+    var nose_g = new THREE.CylinderGeometry( 0.15, 0.15, 0.1, 32 );
+    var material_nose = new THREE.MeshPhongMaterial({ color: 0xffff00 });
+    var nose = new THREE.Mesh( nose_g, material_nose);
+    nose.rotation.x = -1.5;
+    nose.position.set(0,-0.05,-1.53);
 
     //左目
     var eye_g = new THREE.SphereGeometry( 0.1, 32, 32 );
@@ -121,7 +121,7 @@
      pig.add(f_rleg); //右前足を追加
      pig.add(b_lleg); //左後足を追加
      pig.add(b_rleg); //右後足を追加
-     pig.add(beak); //くちばし
+     pig.add(nose); //鼻
      pig.add(r_eye); //右目
      pig.add(l_eye); //左目
      pig.position.set(0,1,0);//ブタグループの原点の位置
