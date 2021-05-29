@@ -102,15 +102,27 @@
     nose.rotation.x = -1.5;
     nose.position.set(0,-0.04,-1.53);
 
-    //左目
+    //左目の作成
     var eye_g = new THREE.SphereGeometry( 0.1, 32, 32 );
     var material_eye = new THREE.MeshPhongMaterial({ color: 0xffffff });
     var r_eye = new THREE.Mesh( eye_g, material_eye);
     r_eye.position.set(0.2,0.2,-1.47);
 
-    //右目
+    //右目の作成
     var l_eye = new THREE.Mesh( eye_g, material_eye);
     l_eye.position.set(-0.2,0.2,-1.47);
+    
+    //左耳の作成
+    var ear_g = new THREE.ConeGeometry( 0.1, 0.5, 32 );
+    var material_ear = new THREE.MeshPhongMaterial({ color: 0xffff00 });
+    var lear = new THREE.Mesh( ear_g, material_ear);
+    lear.rotation.z = 0.5;
+    lear.position.set(0,1,-0.6);
+    
+    //右耳の作成
+    var rear = new THREE.Mesh( ear_g, material_ear);
+    rear.rotation.z = -0.5;
+    rear.position.set(0,1,-0.6);
 
      //ブタのオブジェクト
    const pig = new THREE.Group();
@@ -121,9 +133,11 @@
      pig.add(f_rleg); //右前足を追加
      pig.add(b_lleg); //左後足を追加
      pig.add(b_rleg); //右後足を追加
-     pig.add(nose); //鼻
-     pig.add(r_eye); //右目
-     pig.add(l_eye); //左目
+     pig.add(nose); //鼻を追加
+     pig.add(r_eye); //右目を追加
+     pig.add(l_eye); //左目を追加
+     pig.add(rear); //右耳追加
+     pig.add(lear); //左耳を追加
      pig.position.set(0,1,0);//ブタグループの原点の位置
    
 
