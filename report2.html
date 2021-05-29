@@ -116,13 +116,13 @@
     var ear_g = new THREE.ConeGeometry( 0.1, 0.5, 32 );
     var material_ear = new THREE.MeshPhongMaterial({ color: 0xffff00 });
     var lear = new THREE.Mesh( ear_g, material_ear);
-    lear.rotation.z = 0.5;
-    lear.position.set(0,1,-1.2);
+    lear.rotation.z = 0.4;
+    lear.position.set(-0.3,0.7,-1.2);
     
     //右耳の作成
     var rear = new THREE.Mesh( ear_g, material_ear);
-    rear.rotation.z = -0.5;
-    rear.position.set(0,1,-1.2);
+    rear.rotation.z = -0.4;
+    rear.position.set(0.3,0.7,-1.2);
 
      //ブタのオブジェクト
    const pig = new THREE.Group();
