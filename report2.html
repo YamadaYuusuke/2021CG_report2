@@ -64,29 +64,35 @@
     f_lleg.scale.y = 1.2;
     f_lleg.scale.z = 0.4;
     f_lleg.rotation.x = 0.25;
-    f_lleg.rotation.z = -0.25;
-    f_lleg.position.set(-0.3,-0.8,-0.7);
+    f_lleg.rotation.z = 0.25;
+    f_lleg.position.set(-0.3,-0.8,-0.65);
 
     //右前足を作成
     var f_rleg = new THREE.Mesh( leg_g, material_l);
     f_rleg.scale.x = 0.4;
     f_rleg.scale.y = 1.2;
     f_rleg.scale.z = 0.4;
-    f_rleg.position.set(0.3,-0.8,-0.55);
+    f_rleg.rotation.x = -0.25;
+    f_rleg.rotation.z = -0.25;
+    f_rleg.position.set(0.3,-0.8,-0.65);
     
     //左後足を作成
     var b_lleg = new THREE.Mesh( leg_g, material_l);
     b_lleg.scale.x = 0.4;
     b_lleg.scale.y = 1.2;
     b_lleg.scale.z = 0.4;
-    b_lleg.position.set(-0.3,-0.8,0.55);
+    b_lleg.rotation.x = 0.25;
+    b_lleg.rotation.z = -0.25;
+    b_lleg.position.set(-0.3,-0.8,0.65);
     
     //右後足を作成
     var b_rleg = new THREE.Mesh( leg_g, material_l);
     b_rleg.scale.x = 0.4;
     b_rleg.scale.y = 1.2;
     b_rleg.scale.z = 0.4;
-    b_rleg.position.set(0.3,-0.8,0.55);
+    b_rleg.rotation.x = -0.25;
+    b_rleg.rotation.z = 0.25;
+    b_rleg.position.set(0.3,-0.8,0.65);
 
     //くちばしの作成
     var beak_g = new THREE.ConeGeometry( 0.1, 0.5, 32 );
