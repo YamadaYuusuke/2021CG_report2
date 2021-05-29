@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Pi</title>
+  <title>Pig</title>
 
   <!-- three.jsを読み込む(ローカル) -->
   <!-- <script src="./three.js"></script> -->
@@ -117,13 +117,13 @@
     var material_ear = new THREE.MeshPhongMaterial({ color: 0xffff00 });
     var lear = new THREE.Mesh( ear_g, material_ear);
     lear.scale.z =0.8;
-    lear.rotation.z = 0.47;
+    lear.rotation.z = 0.5;//0.47
     lear.position.set(-0.4,0.5,-1.2);
     
     //右耳の作成
     var rear = new THREE.Mesh( ear_g, material_ear);
     rear.scale.z =0.8;
-    rear.rotation.z = -0.47;
+    rear.rotation.z = -0.5;
     rear.position.set(0.4,0.5,-1.2);
 
      //ブタのオブジェクト
