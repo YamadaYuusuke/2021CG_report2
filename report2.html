@@ -59,28 +59,28 @@
     //左前足を作成
     var leg_g = new THREE.SphereGeometry( 0.25, 32, 32 );
     var material_l = new THREE.MeshPhongMaterial({ color: 0x770077 });
-    var lleg = new THREE.Mesh( leg_g, material_l);
-    lleg.scale.z = 2;
-    lleg.scale.y = 0.7;
-    lleg.position.set(0.3,-0.8,-0.2);
+    var f_lleg = new THREE.Mesh( leg_g, material_l);
+    f_lleg.scale.z = 2;
+    f_lleg.scale.y = 0.7;
+    f_lleg.position.set(0.3,-0.8,-0.2);
 
     //右前足を作成
-    var rleg = new THREE.Mesh( leg_g, material_l);
-    rleg.scale.z = 2;
-    rleg.scale.y = 0.7;
-    rleg.position.set(-0.3,-0.8,-0.2);
+    var f_rleg = new THREE.Mesh( leg_g, material_l);
+    f_rleg.scale.z = 2;
+    f_rleg.scale.y = 0.7;
+    f_rleg.position.set(-0.3,-0.8,-0.2);
     
     //左後足を作成
-    var rleg = new THREE.Mesh( leg_g, material_l);
-    rleg.scale.z = 2;
-    rleg.scale.y = 0.7;
-    rleg.position.set(0.3,-0.8,1.0);
+    var b_lleg = new THREE.Mesh( leg_g, material_l);
+    b_lleg.scale.z = 2;
+    b_lleg.scale.y = 0.7;
+    b_lleg.position.set(0.3,-0.8,1.0);
     
     //右後足を作成
-    var rleg = new THREE.Mesh( leg_g, material_l);
-    rleg.scale.z = 2;
-    rleg.scale.y = 0.7;
-    rleg.position.set(-0.3,-0.8,1.0);
+    var b_rleg = new THREE.Mesh( leg_g, material_l);
+    b_rleg.scale.z = 2;
+    b_rleg.scale.y = 0.7;
+    b_rleg.position.set(-0.3,-0.8,1.0);
 
     //くちばしの作成
     var beak_g = new THREE.ConeGeometry( 0.1, 0.5, 32 );
@@ -104,10 +104,10 @@
      pengin.add(axis);
      pengin.add(head); // 頭を追加
      pengin.add(body); //体を追加
-     pengin.add(lleg); //左足を追加
-     pengin.add(rleg); //右足を追加
-     pengin.add(lwin); //左羽を追加
-     pengin.add(rwin); //右羽を追加
+     pengin.add(f_lleg); //左前足を追加
+     pengin.add(f_rleg); //右前足を追加
+     pengin.add(b_lleg); //左後足を追加
+     pengin.add(b_rleg); //右後足を追加
      pengin.add(beak); //くちばし
      pengin.add(r_eye); //右目
      pengin.add(l_eye); //左目
